@@ -1,7 +1,7 @@
 const baseUrl = 'https://citybike-helsinki-predictor.herokuapp.com'
 //CUR_DATE = "2017-06-11T09:00:00Z"
-CUR_DATE = prompt("Demo mode! Select date"
-  , "2017-06-11T03:00:00Z");
+CUR_DATE = new Date()
+//CUR_DATE = prompt("Demo mode! Select date", "2017-06-11T03:00:00Z");
 
 document.getElementById("nav-date").innerHTML = 
   (new Date(CUR_DATE)).toLocaleDateString('fi-FI') + " " +
@@ -24,7 +24,8 @@ function createStationPlot(stationId) {
       .x(function(d) { return x(d.date); })
       .y(function(d) { return y(d.avlBikes); });
 
-  d3.json(`${baseUrl}/combined/${stationId}/${CUR_DATE}`, function (error, data) {
+  //d3.json(`${baseUrl}/combined/${stationId}/${CUR_DATE}`, function (error, data) {
+  d3.json(`${baseUrl}/combined/${stationId}`, function (error, data) {
     if (error) throw error;
 
     var parseTime = d3.utcParse("%Y-%m-%dT%H:%M:%SZ");
