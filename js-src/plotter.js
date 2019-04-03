@@ -2,10 +2,10 @@ const baseUrl = 'https://citybike-helsinki-predictor.herokuapp.com'
 //CUR_DATE = "2017-06-11T09:00:00Z"
 
 // For normal operation, activate this line instead of the next one.
-//CUR_DATE = new Date()
+CUR_DATE = new Date()
 
 // Winter mode: demo historical data
-CUR_DATE = prompt("Historical mode (during citybike off-season)! Select point of time within months 2017-06, 2017-08, 2017-09, 2018-06, 2018-07, 2018-08 and 2018-09", "2017-06-11T12:00:00Z");
+//CUR_DATE = prompt("Historical mode (during citybike off-season)! Select point of time within months 2017-06, 2017-08, 2017-09, 2018-06, 2018-07, 2018-08 and 2018-09", "2017-06-11T12:00:00Z");
 
 document.getElementById("nav-date").innerHTML = 
   (new Date(CUR_DATE)).toLocaleDateString('fi-FI') + " " +
