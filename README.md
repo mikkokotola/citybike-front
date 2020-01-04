@@ -5,6 +5,8 @@ Citybike predictor app frontend.
 [Backend](https://github.com/juhapekkamoilanen/citybike-statistical-analysis) for the citybike predictor app is a separate repository.
 
 ### Deployment
+NOTE: as of 4.1.2020, the backend is not functional in historical mode due to the unavailability of historical citybike availability data from HSL at https://dev.hsl.fi/citybike/stations/. The app will be in summer mode until further notice.
+
 Frontend is deployed at [https://citybike-pred.herokuapp.com/](https://citybike-pred.herokuapp.com/). The frontend uses the python backend deployed at [https://citybike-helsinki-predictor.herokuapp.com/](https://citybike-helsinki-predictor.herokuapp.com/).
 
 ### Frontend info
